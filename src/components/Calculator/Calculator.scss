@@ -1,0 +1,103 @@
+h1 {
+    color: var(--text-color-secondary);
+    font-size: 1em;
+}
+
+.display-value {
+    width: calc(100% - 2em);
+    background: var(--screen-bg-color);
+    padding: 1em;
+    text-align: right;
+    color: var(--text-color-secondary);
+    border-radius: 0.25em;
+    margin-bottom: 0.4em;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+
+    .theme-wrapper {
+        display: flex;
+        align-items: center;
+        color: var(--text-color-secondary);
+        position: relative;
+
+        span {
+            font-size: 0.4em;
+            padding-right: 1.75em;
+        }
+
+        .theme-number {
+            display: flex;
+            position: absolute;
+            top: -2em;
+            font-size: 0.4em;
+            justify-content: space-between;
+            width: 5.0em;
+            right: 0.5em;
+
+        }
+    }
+}
+
+.buttons-layout {
+    display: grid;
+    gap: 0.5em;
+    grid-template: "auto-fit auto-fit auto-fit auto-fit";
+    padding: 0.6em;
+    background: var(--toggle-bg-kp-color);
+    border-radius: 0.25em;
+
+    button {
+        padding: 0.9rem 2rem 0.5rem 2rem;
+        border: none;
+        position: relative;
+        font: inherit;
+        text-size-adjust: none;
+        cursor: pointer;
+        outline: inherit;
+        width: 100%;
+        border-radius: 0.4rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &.number-and-operator {
+            background: var(--key-bg-numeric-color);
+            box-shadow: 0 0.1em 0 var(--key-shadow-numeric-color);
+        }
+
+        &.function {
+            background: var(--key-bg-color);
+            box-shadow: 0 0.1em 0 var(--key-shadow-color);
+            color: var(--text-color-secondary);
+            font-size: 1.5rem;
+        }
+
+        &.result {
+            background: var(--key-bg-toggle-color);
+            box-shadow: 0 0.1em 0 var(--key-shadow-toggle-color);
+            color: var(--text-color-secondary);
+            font-size: 1.5rem;
+
+        }
+
+        @media screen and (max-width: 768px) {
+            padding: 0.7rem 1rem 0.3rem 1rem;
+        }
+
+        div {
+            position: absolute;
+        }
+    }
+
+    .last-item {
+        grid-column: span 2;
+        width: 100%;
+    }
+
+    grid-auto-flow:row;
+}

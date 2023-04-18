@@ -1,0 +1,35 @@
+.switcher {
+    width: 0.50em;
+    height: 0.75em;
+    background: var(--screen-bg-color);
+    border-radius: 4em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding: 0 1em;
+  
+    .circle {
+      width: 0.5em;
+      height: 0.5em;
+      background: var(--key-bg-toggle-color);
+      border-radius: 50%;
+      position: absolute;
+      cursor: pointer;
+      transition: transform 1s ease;
+      box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.25);
+    }
+  }
+  
+  .position1 {
+    transform: translate(-0.825em, 0);
+  }
+  
+  .position2 {
+    transform: translate(0, 0);
+  }
+  
+  .position3 {
+    transform: translate(0.825em, 0);
+  }
+  
